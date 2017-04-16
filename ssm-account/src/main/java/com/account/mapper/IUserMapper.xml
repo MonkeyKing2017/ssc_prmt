@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.account.mapper.IUserMapper">
+  <resultMap type="com.account.bean.User" id="userResult">
+    <id column="ID" jdbcType="BIGINT" property="id"/>
+    <result column="NAME" jdbcType="VARCHAR" property="name"/>
+    <result column="CREATETIME" jdbcType="DATE" property="createTime"/>
+	<result column="EMAIL" jdbcType="VARCHAR" property="email"/>
+    <result column="GENDER" jdbcType="VARCHAR" property="gender"/>
+    <result column="ACCOUNT" jdbcType="VARCHAR" property="account"/>
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password"/>
+    <result column="PHONENUMBER" jdbcType="VARCHAR" property="phoneNumber"/>
+  </resultMap>
+  <select id="findUserById" resultMap="userResult">
+  	select * from user where id = #{id}
+  </select>
+</mapper>

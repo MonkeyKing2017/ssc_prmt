@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.account.mapper.ICXMapper">
+  <resultMap type="com.account.bean.CXUser" id="cxResult">
+    <id column="ID" jdbcType="BIGINT" property="id"/>
+    <result column="NAME" jdbcType="VARCHAR" property="name"/>
+	<result column="EMAIL" jdbcType="VARCHAR" property="email"/>
+    <result column="ACCOUNT" jdbcType="VARCHAR" property="account"/>
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password"/>
+  </resultMap>
+  
+  <insert id="addUser" parameterType="com.account.bean.CXUser">
+  	insert into chexiang(account,PASSWORD) values(#{account},#{password})
+  </insert>
+  
+  <select id="findCXByAccount" resultMap="cxResult">
+  	select * from chexiang where account = #{account}
+  </select>
+  
+  <select id="findCXById" resultMap="cxResult">
+  	select * from chexiang where id = #{id}
+  </select>
+  
+  <update id="updatePassword" parameterType="com.account.bean.CXUser">
+  	update chexiang 
+  	set password = #{password}
+  	where id = #{id}
+  </update>
+  <select id="findCXBySession" resultMap="cxResult" >
+  	select * from chexiang where account = #{account} and password = #{password}
+  </select>
+  
+</mapper>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xsi:schemaLocation="
+		http://java.sun.com/xml/ns/javaee 
+		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+		id="WebApp_ID" 
+		version="3.0">
+  <display-name>ssm-account</display-name>
+  <welcome-file-list>
+    <!-- <welcome-file>/WEB-INF/view/jsp/index.jsp</welcome-file> -->
+    <welcome-file>account.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+  	<filter-name>encoding</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>forceEncoding</param-name>
+  		<param-value>true</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>springMVC</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:config/spring/spring-*.xml</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>springMVC</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>GeRen1</servlet-name>
+  	<servlet-class>com.account.controller.test.GeRen1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GeRen1</servlet-name>
+  	<url-pattern>/GeRen1.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>GeRen2</servlet-name>
+  	<servlet-class>com.account.controller.test.GeRen2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GeRen2</servlet-name>
+  	<url-pattern>/GeRen2.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>GeRen3</servlet-name>
+  	<servlet-class>com.account.controller.test.GeRen3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GeRen3</servlet-name>
+  	<url-pattern>/GeRen3.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RenZheng1</servlet-name>
+  	<servlet-class>com.account.controller.test.RenZheng1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RenZheng1</servlet-name>
+  	<url-pattern>/RenZheng1.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RenZheng2</servlet-name>
+  	<servlet-class>com.account.controller.test.RenZheng2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RenZheng2</servlet-name>
+  	<url-pattern>/RenZheng2.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>WangJiMiMa1</servlet-name>
+  	<servlet-class>com.account.controller.test.WangJiMiMa1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WangJiMiMa1</servlet-name>
+  	<url-pattern>/WangJiMiMa1.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>WangJiMiMa2</servlet-name>
+  	<servlet-class>com.account.controller.test.WangJiMiMa2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WangJiMiMa2</servlet-name>
+  	<url-pattern>/WangJiMiMa2.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>WangJiMiMa3</servlet-name>
+  	<servlet-class>com.account.controller.test.WangJiMiMa3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WangJiMiMa3</servlet-name>
+  	<url-pattern>/WangJiMiMa3.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>WangJiMiMa4</servlet-name>
+  	<servlet-class>com.account.controller.test.WangJiMiMa4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WangJiMiMa4</servlet-name>
+  	<url-pattern>/WangJiMiMa4.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ZhuCe1</servlet-name>
+  	<servlet-class>com.account.controller.test.ZhuCe1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ZhuCe1</servlet-name>
+  	<url-pattern>/ZhuCe1.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ZhuCe2</servlet-name>
+  	<servlet-class>com.account.controller.test.ZhuCe2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ZhuCe2</servlet-name>
+  	<url-pattern>/ZhuCe2.action</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
